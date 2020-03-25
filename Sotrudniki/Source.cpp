@@ -14,23 +14,20 @@ void menu();
 void save();
 
 int main() {
-	//////////////////////////////////////////
 	int action = 0;
-
-	//////////////////////////////////////////
-	if (!fout.is_open())//если файл не откроетс€
+	if (!fout.is_open()) // dont open error
 	{
 		cout << "File not open" << endl;
 	}
 	else
 	{
 		
-		for (int i = 0; i < n; i++)//считываю данные
+		for (int i = 0; i < n; i++) // read info
 		{
 			fout >> workers[i].surname >> workers[i].name >> workers[i].age >> workers[i].zarplata;
 		}
-		 //«акрываем файл
-		// fout.close();
+		
+		fout.close();
 	}
 	
 	do
@@ -50,33 +47,13 @@ int main() {
 				addWorker();
 			}
 
-			else if (n > size_mass)   //  если превышает размер массива
+			else if (n > size_mass)   //  size >
 			{
-				worker* temp = new worker[size_mass];// временный массив дл€ хранени€ старых данных
-				for (int i = 0; i < n - 1; i++)
-				{
-					temp[i].name = workers[i].name;
-					temp[i].surname = workers[i].surname;
-					temp[i].age = workers[i].age;
-					temp[i].zarplata = workers[i].zarplata;
-				}
-				delete[] workers;
-				size_mass = size_mass * 2;
-				workers = new worker[size_mass];
-				for (int i = 0; i < n - 1; i++)   // записиваю данные в новй увеличеный массив
-				{
-					workers[i].name = temp[i].name;
-					workers[i].surname = temp[i].surname;
-					workers[i].age = temp[i].age;
-					workers[i].zarplata = temp[i].zarplata;
-				}
-
-				addWorker();
-
-				delete[] temp;
+				addWorkerELSE();
 			}
+			blue
 			cout << "\nCan save changes to file (5)" << endl;
-
+			def
 
 
 		}break;
@@ -94,13 +71,7 @@ int main() {
 		case 4:
 		{
 			cout << endl;
-			cout << "\nYour workers:\n";
-			for (int i = 0; i < n; i++)
-			{
-				cout << workers[i].surname << " " << workers[i].name << " " << workers[i].age << " " << workers[i].zarplata << endl;
-			}
-			cout << endl;
-
+			showWorkers();
 
 		}break;
 		case 5:

@@ -75,6 +75,16 @@ void addWorkerELSE()
 	delete[] temp; // del temp mass
 }
 
+void deleteWorker()
+{
+
+}
+
+void searchWorker()
+{
+	
+}
+		
 
 void showWorkers()
 {

@@ -7,12 +7,6 @@ using namespace std;
 
 
 
-void addWorker();
-
-void menu();
-
-void save();
-
 int main() {
 	int action = 0;
 	if (!fout.is_open()) // dont open error
@@ -58,14 +52,14 @@ int main() {
 
 		}break;
 
-		case 2:
+		case 2: //delete
 		{
 
 
 		}break;
-		case 3:
+		case 3: // search
 		{
-
+			searchWorker();
 
 		}break;
 		case 4:

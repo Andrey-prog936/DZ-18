@@ -77,12 +77,12 @@ void addWorkerELSE()
 
 void deleteWorker()
 {
-
+	//---------
 }
 
 void searchWorker()
 {
-	
+	//---------
 }
 		
 
@@ -91,13 +91,13 @@ void showWorkers()
 	const int N = 256;
 	char S[N];
 
-	ifstream in1("outWorkers.txt"); // open fileeeee
-	while (!in1.eof()) // cycle read
+	ifstream ins("outWorkers.txt"); // open fileeeee
+	while (!ins.eof()) // cycle read
 	{
-		in1.getline(S, N); // write in S
+		ins.getline(S, N); // write in S
 		cout << S << endl; // cout
 	}
-	in1.close();  //close filee
+	ins.close();  //close filee
 }
 
 void save()

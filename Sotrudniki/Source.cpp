@@ -15,18 +15,15 @@ int main() {
 	}
 	else
 	{
-		
 		for (int i = 0; i < n; i++) // read info
 		{
 			fout >> workers[i].surname >> workers[i].name >> workers[i].age >> workers[i].zarplata;
 		}
-		
 		fout.close();
 	}
-	
+
 	do
 	{
-		
 		menu();
 		cout << "Select action: ";
 		cin >> action;
@@ -46,7 +43,7 @@ int main() {
 				addWorkerELSE();
 			}
 			blue
-			cout << "\nCan save changes to file (5)" << endl;
+				cout << "\nCan save changes to file (5)" << endl;
 			def
 
 
@@ -54,13 +51,11 @@ int main() {
 
 		case 2: //delete
 		{
-
-
+			deleteWorker();
 		}break;
 		case 3: // search
 		{
 			searchWorker();
-
 		}break;
 		case 4:
 		{
@@ -71,7 +66,7 @@ int main() {
 		case 5:
 		{
 			green
-			save();
+				save();
 			def
 		}break;
 		case 6:
@@ -84,7 +79,9 @@ int main() {
 		}break;
 
 		default: {
-			cout << "Please select action (1 - 3)" << endl;
+			red
+			cout << "Please select action (1 - 7)" << endl<<endl;
+			def
 		}
 		}
 
